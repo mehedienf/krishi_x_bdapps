@@ -115,13 +115,13 @@ class LiveServicesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final topPad = MediaQuery.of(context).padding.top + 116 + 12;
+    final topPad = MediaQuery.of(context).padding.top + 100;
     return Scaffold(
       backgroundColor: const Color(0xFFF4F6FA),
       extendBodyBehindAppBar: true,
-      appBar: DisasterAppBar(title: 'সরকারি লাইভ সেবা', onMenuTap: onMenuTap),
+      appBar: DisasterAppBar(title: 'সরকারি লাইভ সেবা', onMenuTap: onMenuTap, showMenuButton: true,),
       body: ListView.builder(
-        padding: EdgeInsets.fromLTRB(16, topPad, 16, 100),
+        padding: EdgeInsets.fromLTRB(16, topPad, 16, 105),
         itemCount: _services.length,
         itemBuilder: (context, i) {
           final section = _services[i];
@@ -129,7 +129,7 @@ class LiveServicesPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.fromLTRB(4, 18, 4, 10),
+                padding: const EdgeInsets.fromLTRB(4, 10, 4, 10),
                 child: Row(
                   children: [
                     Container(

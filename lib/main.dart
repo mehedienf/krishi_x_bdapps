@@ -43,7 +43,7 @@ class TestApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-        title: 'Krishi Plus',
+        title: 'KrishiX',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           useMaterial3: true,

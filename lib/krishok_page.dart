@@ -204,7 +204,7 @@ class KrishokPage extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.fromLTRB(
           16,
-          MediaQuery.of(context).padding.top + 116 + 12,
+          MediaQuery.of(context).padding.top + 116 ,
           16,
           120,
         ),
@@ -224,7 +224,7 @@ class KrishokPage extends StatelessWidget {
               const Text(
                 'কৃষক সেবা',
                 style: TextStyle(
-                  fontSize: 21,
+                  fontSize: 18,
                   fontWeight: FontWeight.bold,
                   color: Color(0xFF0D1B2A),
                 ),

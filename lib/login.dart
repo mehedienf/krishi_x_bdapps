@@ -189,24 +189,21 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const Icon(
-                Icons.lock_outline_rounded,
-                size: 80,
-                color: Color(0xFF6C63FF),
-              ),
+              Image.asset('assets/app_icon.png', width: 100, height: 100, ),
               const SizedBox(height: 20),
               Text(
-                'স্বাগতম',
+                'KrishiX',
                 style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                   fontWeight: FontWeight.bold,
+                  color: Colors.green.shade500
                 ),
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 8),
-              const Text('Robi/Airtel নম্বর দিন', textAlign: TextAlign.center),
+              const SizedBox(height: 20),
+              // const Text('Robi/Airtel নম্বর দিন', textAlign: TextAlign.center),
               const SizedBox(height: 8),
               Text(
-                '5.56 BDT including (Vat+SC+SD) For Robi and Airtel Users only.',
+                'Daily charging 5.56 BDT including (Vat+SC+SD) For Robi and Airtel Users only.',
                 // '2.78 BDT including (Vat+SC+SD) For Robi and Airtel Users only.',
                 textAlign: TextAlign.center,
                 style: TextStyle(

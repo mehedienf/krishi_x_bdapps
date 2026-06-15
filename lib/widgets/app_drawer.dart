@@ -89,40 +89,51 @@ class AppDrawer extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             DrawerHeader(
-              decoration: const BoxDecoration(color: Color(0xFF1B5E20)),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Row(
-                    children: [
-                      Image.asset('assets/app_icon.png', width: 32, height: 32),
-                      const SizedBox(width: 12),
-                      const Text(
-                        'Krishi+',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
+              padding: .all(0),
+              // decoration: const BoxDecoration(color: Color(0xFF1B5E20)),
+              child: Center(
+                child: Row(
+                  mainAxisAlignment: .center,
+                  children: [
+                    Image.asset('assets/app_icon.png', width: 64, height: 64),
+                    const SizedBox(width: 12),
+                    Text(
+                      'KrishiX',
+                      style: TextStyle(
+                        color: const Color.fromARGB(
+                          255,
+                          37,
+                          87,
+                          38,
+                        ).withValues(alpha: 0.3),
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold,
                       ),
-                    ],
-                  ),
-                  const SizedBox(height: 6),
-                  const Text('মেনু', style: TextStyle(color: Colors.white70)),
-                ],
+                    ),
+                  ],
+                ),
+              ),
+
+              // const SizedBox(height: 6),
+              // const Text('মেনু', style: TextStyle(color: Colors.white70)),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListTile(
+                shape: RoundedRectangleBorder(borderRadius: .circular(40)),
+                tileColor: Colors.red,
+                // leading: const Icon(Icons.cancel_outlined, color: Colors.red),
+                title: const Text(
+                  'আনসাবস্ক্রাইব করুন',
+                  style: TextStyle(color: Color.fromARGB(255, 255, 255, 255), fontSize: 18),
+                  textAlign: .center,
+                ),
+                onTap: () async {
+                  await _confirmAndUnsubscribe(context);
+                },
               ),
             ),
-            ListTile(
-              leading: const Icon(Icons.cancel_outlined, color: Colors.red),
-              title: const Text(
-                'আনসাবস্ক্রাইব করুন',
-                style: TextStyle(color: Colors.red),
-              ),
-              onTap: () async {
-                await _confirmAndUnsubscribe(context);
-              },
-            ),
+
             const Padding(
               padding: EdgeInsets.all(16),
               child: Column(
@@ -138,17 +149,11 @@ class AppDrawer extends StatelessWidget {
                   ),
                   SizedBox(height: 6),
                   Text(
-                    'STOP krishiplus লিখুন এবং 21213 নম্বরে পাঠান',
+                    'STOP 62742 লিখুন এবং 21213 নম্বরে পাঠান',
                     style: TextStyle(fontSize: 12, color: Colors.black45),
                   ),
                 ],
               ),
-            ),
-            const Spacer(),
-            ListTile(
-              leading: const Icon(Icons.close_rounded),
-              title: const Text('বন্ধ করুন'),
-              onTap: () => Navigator.of(context).pop(),
             ),
           ],
         ),

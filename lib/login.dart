@@ -203,7 +203,7 @@ class _LoginPageState extends State<LoginPage> {
               // const Text('Robi/Airtel নম্বর দিন', textAlign: TextAlign.center),
               const SizedBox(height: 8),
               Text(
-                'Daily charging 5.56 BDT including (Vat+SC+SD) For Robi and Airtel Users only.',
+                'Daily charge is 5.56 BDT (including VAT, SD & SC). For Robi and Airtel users only.',
                 // '2.78 BDT including (Vat+SC+SD) For Robi and Airtel Users only.',
                 textAlign: TextAlign.center,
                 style: TextStyle(

@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
-const String _baseUrl = "https://bdapps.flicksize.com/krishix/api/";
+const String _baseUrl = "https://bdappsdigitalapps.com/NADB26015/prantik/";
 
-bool _isSupportedRobiAirtelNumber(String phone) {
+bool _isSupportedRobiCirkleNumber(String phone) {
   return RegExp(r'^01(?:6|8)\d{8}$').hasMatch(phone);
 }
 
@@ -58,8 +58,8 @@ class _LoginPageState extends State<LoginPage> {
       _showError('মোবাইল নম্বর দিন');
       return;
     }
-    if (!_isSupportedRobiAirtelNumber(phone)) {
-      _showError('সঠিক Robi/Airtel নম্বর দিন');
+    if (!_isSupportedRobiCirkleNumber(phone)) {
+      _showError('সঠিক Robi/Cirkle নম্বর দিন');
       return;
     }
 
@@ -189,22 +189,22 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Image.asset('assets/app_icon.png', width: 100, height: 100, ),
+              Image.asset('assets/app_icon.png', width: 100, height: 100),
               const SizedBox(height: 20),
               Text(
                 'KrishiX',
                 style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                   fontWeight: FontWeight.bold,
-                  color: Colors.green.shade500
+                  color: Colors.green.shade500,
                 ),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 20),
-              // const Text('Robi/Airtel নম্বর দিন', textAlign: TextAlign.center),
+              // const Text('Robi/Cirkle নম্বর দিন', textAlign: TextAlign.center),
               const SizedBox(height: 8),
               Text(
-                'Daily charge is 2.78 BDT (including VAT, SD & SC). For Robi and Airtel users only.',
-                // '2.78 BDT including (Vat+SC+SD) For Robi and Airtel Users only.',
+                'Daily charge is 2.78 BDT (including VAT, SD & SC). For Robi and Cirkle users only.',
+                // '2.78 BDT including (Vat+SC+SD) For Robi and Cirkle Users only.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.grey.shade600,
